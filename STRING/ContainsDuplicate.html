@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //------------1st solution------------------
+      let nums = [1, 2, 3, 1];
+      for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+          if (nums[i] === nums[j]) {
+            console.log("true");
+          }
+        }
+      }
+      console.log("false");
+
+      //-------------------2nd solution-----------------------
+      nums.sort();
+      for (let i = 0; i < nums.length - 1; i++) {
+        if (nums[i] === nums[i + 1]) {
+          return true;
+        }
+      }
+
+      return false;
+    </script>
+  </head>
+  <body></body>
+</html>
