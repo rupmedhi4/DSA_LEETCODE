@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let s = "    the      sky is blue   ";
+   
+      const wordsArray = s.trim().split(/\s+/);
+      let   arr = wordsArray.length-1
+      for(let i = 0; i<wordsArray.length/2; i++){
+        let temp = wordsArray[i]
+        wordsArray[i]=wordsArray[arr-i]
+        wordsArray[arr-i]=temp
+      }
+      const word = wordsArray.join(" ");
+      console.log(word);
+    </script>
+  </head>
+  <body></body>
+</html>
+
+
