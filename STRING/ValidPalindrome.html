@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let s = "A man, a plan, a canal: Panama";
+      let s = "race a car"
       let word = s.trim().toLowerCase().replace(/[^a-z0-9]/g, "").split("");
-      console.warn(word);
+
+ 
+      for(let i =0; i<word.length/2; i++){
+          if(word[i]!=word[word.length-1-i]){
+           //  return false
+           console.log("false");
+
+          }
+      }
+     // return true
+      console.log(true);
     </script>
   </head>
   <body></body>
