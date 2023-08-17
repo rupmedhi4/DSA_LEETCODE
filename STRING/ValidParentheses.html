@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        let s = "()[]{}(}"
+        s=s.split("")
+        let stack=[]
+        let count=stack.length
+
+        for(let i=0; i<s.length;i++){
+            if(s[i]==="(" ||s[i]=== "[" || s[i]==="{"){
+                stack[count]=s[i]
+                count++
+                //console.log(stack)
+
+        }else{
+            let opening=stack[count-1]
+            let closing = s[i]
+           // console.log(closing)
+            if(opening === "(" && closing===")" || opening === "[" && closing==="]" || opening === "{" && closing==="}"){
+                count--
+                stack.length=count
+            }else{
+                //return false
+                console.log(false)
+
+            }
+        }
+        }
+        if(stack.length===0){
+            //return true
+            console.log(true)
+        }else{
+            //return false
+            console.log(false)
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
