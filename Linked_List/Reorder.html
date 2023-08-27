@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let head = [1, 2, 3, 4];
+      var reorderList = function (head) {
+        if (!head || !head.next || !head.next.next) {
+          return;
+        }
+        let slow = head;
+        let fast = head;
+        while (fast.next && fast.next.next) {
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        let curr = slow.next;
+        slow.next = null;
+        let prev = null;
+        while (curr) {
+          let next = curr.next;
+          curr.next = prev;
+          prev = curr;
+          curr = next;
+        }
+
+        let currHead = head;
+        while (prev) {
+          let temp1 = currHead.next;
+          let temp2 = prev.next;
+          currHead.next = prev;
+          prev.next = temp1;
+          currHead = temp1;
+          prev = temp2;
+        }
+
+        return currHead;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
