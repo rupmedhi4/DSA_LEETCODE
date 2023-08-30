@@ -1,5 +1,5 @@
 //-------------------Question--------------------
-// https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/
+// https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/   question link
 // Print all the duplicate characters in a string
 // Given a string S, the task is to print all the duplicate characters with their occurrences in the given string.
 
