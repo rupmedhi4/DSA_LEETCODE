@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>5. Longest Palindromic Substring</h2>
+    <span>
+      Given a string s, return the longest palindromic substring in s. Example
+      1: Input: s = "babad" Output: "bab" Explanation: "aba" is also a valid
+      answer.
+    </span>
+    <script>
+      let s = "aaaabbaa";
+      let result = "";
+
+      function CountSubstring(start, end) {
+        while (start >= 0 && end < s.length && s[start] === s[end]) {
+          start--;
+          end++;
+        }
+        return s.slice(start + 1, end);
+      }
+
+      for (let i = 0; i < s.length; i++) {
+        let length1 = CountSubstring(i, i);
+        let length2 = CountSubstring(i, i + 1);
+
+        if (length1.length > result.length) {
+          result = length1;
+        }
+        if (length2.length > result.length) {
+          result = length2;
+        }
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>

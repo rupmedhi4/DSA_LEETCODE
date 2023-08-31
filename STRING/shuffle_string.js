@@ -1,3 +1,15 @@
+
+//Checking valid shuffle of two Strings
+
+//https://www.geeksforgeeks.org/checking-valid-shuffle-of-two-strings/
+
+
+
+
+
+
+
+
 let str1 = "BA"
 let str2 = "XY"
 let shuffle = "XfAB" 
